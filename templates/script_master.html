@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Script Master</h1>
+<div class="toolbar">
+    <form method="GET" action="{{ url_for('script_master') }}">
+        <input type="text" name="search" placeholder="Search script master...">
+        <button type="submit">Search</button>
+    </form>
+    <button class="add-btn" onclick="location.href='{{ url_for('add_script') }}'">+</button>
+    <button onclick="location.reload()">⟳</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Source ID</th>
+            <th>Source Code Path</th>
+            <th>Script Name</th>
+            <th>Version</th>
+            <th>Description</th>
+            <th>Created By</th>
+            <th>Is Active Status</th>
+            <th>Dependency Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for script in scripts %}
+        <tr>
+            <td>{{ script[0] }}</td>
+            <td>{{ script[1] }}</td>
+            <td>{{ script[2] }}</td>
+            <td>{{ script[3] }}</td>
+            <td>{{ script[4] }}</td>
+            <td>{{ script[5] }}</td>
+            <td>{{ script[6] }}</td>
+            <td>{{ script[10] }}</td>
+            <td>{{ script[11] }}</td>
+            <td><a href="{{ url_for('edit_script', id=script[0]) }}">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

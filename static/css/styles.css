@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav {
+  background-color: #007bff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.toolbar {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.toolbar form {
+  display: inline-block;
+}
+
+.toolbar button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td a {
+  color: #007bff;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+button.add-btn {
+  float: right;
+  margin-right: 20px;
+  background-color: #28a745;
+}
+
+button.add-btn:hover {
+  background-color: #218838;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

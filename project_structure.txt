@@ -1,0 +1,30 @@
+StreamLoomApp/
+│
+├── app.py
+├── forms.py
+├── script_01.py
+├── script_02.py
+├── email_utils.py
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── login.html
+│   ├── add_source.html
+│   ├── edit_source.html
+│   ├── add_script.html
+│   ├── edit_script.html
+│   ├── add_queue_config.html
+│   ├── edit_queue_config.html
+│   ├── add_queue_master.html
+│   ├── edit_queue_master.html
+│   ├── source_master.html
+│   ├── script_master.html
+│   ├── queue_config.html
+│   ├── priority_log.html
+│   ├── queue_master.html
+│   ├── payload_master.html
+│   ├── queue_reprocess.html
+│
+└── static/
+    └── css/
+        └── styles.css

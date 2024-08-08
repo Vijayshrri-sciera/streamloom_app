@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Add New Queue Master</h1>
+<form method="POST">
+    <label for="source_id">Source ID:</label>
+    <input type="number" id="source_id" name="source_id" required><br>
+
+    <label for="script_id">Script ID:</label>
+    <input type="number" id="script_id" name="script_id" required><br>
+
+    <label for="source_name">Source Name:</label>
+    <input type="text" id="source_name" name="source_name" required><br>
+
+    <label for="queue_name">Queue Name:</label>
+    <input type="text" id="queue_name" name="queue_name" required><br>
+
+    <label for="queue_date">Queue Date:</label>
+    <input type="text" id="queue_date" name="queue_date" required><br>
+
+    <label for="queue_type">Queue Type:</label>
+    <input type="text" id="queue_type" name="queue_type" required><br>
+
+    <label for="priority">Priority:</label>
+    <input type="number" id="priority" name="priority" required><br>
+
+    <label for="process_status">Process Status:</label>
+    <input type="text" id="process_status" name="process_status" required><br>
+
+    <label for="is_queued">Is Queued:</label>
+    <input type="text" id="is_queued" name="is_queued" required><br>
+
+    <label for="is_aggregated">Is Aggregated:</label>
+    <input type="text" id="is_aggregated" name="is_aggregated" required><br>
+
+    <label for="is_parsed">Is Parsed:</label>
+    <input type="text" id="is_parsed" name="is_parsed" required><br>
+
+    <label for="created_by">Created By:</label>
+    <input type="text" id="created_by" name="created_by" required><br>
+
+    <label for="is_dropped">Is Dropped:</label>
+    <input type="text" id="is_dropped" name="is_dropped" required><br>
+
+    <label for="dropped_date">Dropped Date:</label>
+    <input type="text" id="dropped_date" name="dropped_date" required><br>
+
+    <label for="input_data_index">Input Data Index:</label>
+    <input type="text" id="input_data_index" name="input_data_index" required><br>
+
+    <label for="error_details">Error Details:</label>
+    <input type="text" id="error_details" name="error_details" required><br>
+
+    <label for="retry_count">Retry Count:</label>
+    <input type="number" id="retry_count" name="retry_count" required><br>
+
+    <button type="submit">Add Queue Master</button>
+</form>
+{% endblock %}

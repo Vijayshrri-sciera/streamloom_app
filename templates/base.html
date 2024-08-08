@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamLoom App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+    </nav>
+    <nav>
+        <a href="{{ url_for('source_master') }}">Source Master</a>
+        <a href="{{ url_for('script_master') }}">Script Master</a>
+        <a href="{{ url_for('queue_config') }}">Queue Config</a>
+        <a href="{{ url_for('queue_master') }}">Queue Master</a>
+        <a href="{{ url_for('payload_master') }}">Payload Master</a>
+        <a href="{{ url_for('queue_reprocess') }}">Queue Reprocess</a>
+        <a href="{{ url_for('priority_log') }}">Priority Log</a>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Queue Reprocess</h1>
+<div class="toolbar">
+    <form method="GET" action="{{ url_for('queue_reprocess') }}">
+        <input type="text" name="search" placeholder="Search queue reprocess...">
+        <button type="submit">Search</button>
+    </form>
+    <button onclick="location.reload()">⟳</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Config ID</th>
+            <th>Source ID</th>
+            <th>Script ID</th>
+            <th>Input Data</th>
+            <th>Fail Count</th>
+            <th>Last Failed Date</th>
+            <th>Is Retried</th>
+            <th>Retried Date</th>
+            <th>Error Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reprocess in reprocesses %}
+        <tr>
+            <td>{{ reprocess[0] }}</td>
+            <td>{{ reprocess[1] }}</td>
+            <td>{{ reprocess[2] }}</td>
+            <td>{{ reprocess[3] }}</td>
+            <td>{{ reprocess[4] }}</td>
+            <td>{{ reprocess[5] }}</td>
+            <td>{{ reprocess[6] }}</td>
+            <td>{{ reprocess[7] }}</td>
+            <td>{{ reprocess[8] }}</td>
+            <td>{{ reprocess[9] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

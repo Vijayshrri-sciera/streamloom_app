@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Priority Log</h1>
+<div class="toolbar">
+    <form method="GET" action="{{ url_for('priority_log') }}">
+        <input type="text" name="search" placeholder="Search priority log...">
+        <button type="submit">Search</button>
+    </form>
+    <button onclick="location.reload()">⟳</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Config ID</th>
+            <th>Old Priority</th>
+            <th>New Priority</th>
+            <th>Updated By</th>
+            <th>Updated Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for priority_log in priority_logs %}
+        <tr>
+            <td>{{ priority_log[0] }}</td>
+            <td>{{ priority_log[1] }}</td>
+            <td>{{ priority_log[2] }}</td>
+            <td>{{ priority_log[3] }}</td>
+            <td>{{ priority_log[4] }}</td>
+            <td>{{ priority_log[5] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

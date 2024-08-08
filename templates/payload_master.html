@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Payload Master</h1>
+<div class="toolbar">
+    <form method="GET" action="{{ url_for('payload_master') }}">
+        <input type="text" name="search" placeholder="Search payload master...">
+        <button type="submit">Search</button>
+    </form>
+    <button onclick="location.reload()">⟳</button>
+    <button class="fetch-btn" onclick="location.href='{{ url_for('fetch_payload') }}'">Fetch Payload</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Source ID</th>
+            <th>Script ID</th>
+            <th>Config Queue ID</th>
+            <th>Master Queue ID</th>
+            <th>Queue Name</th>
+            <th>Priority</th>
+            <th>Payload Input</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for payload in payloads %}
+        <tr>
+            <td>{{ payload[0] }}</td>
+            <td>{{ payload[1] }}</td>
+            <td>{{ payload[2] }}</td>
+            <td>{{ payload[3] }}</td>
+            <td>{{ payload[4] }}</td>
+            <td>{{ payload[5] }}</td>
+            <td>{{ payload[6] }}</td>
+            <td>{{ payload[7] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

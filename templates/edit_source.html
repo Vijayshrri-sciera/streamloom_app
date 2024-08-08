@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit Source</h1>
+<form method="POST">
+    <label for="source_name">Source Name:</label>
+    <input type="text" id="source_name" name="source_name" value="{{ source[1] }}" required><br>
+
+    <label for="source_domain">Source Domain:</label>
+    <input type="text" id="source_domain" name="source_domain" value="{{ source[2] }}" required><br>
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value="{{ source[3] }}" required><br>
+
+    <label for="maxcount_per_day">Maxcount Per Day:</label>
+    <input type="number" id="maxcount_per_day" name="maxcount_per_day" value="{{ source[4] }}" required><br>
+
+    <label for="is_active_status">Is Active Status:</label>
+    <input type="text" id="is_active_status" name="is_active_status" value="{{ source[5] }}" required><br>
+
+    <button type="submit">Update Source</button>
+</form>
+{% endblock %}
